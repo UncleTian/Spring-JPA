@@ -12,6 +12,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.lin.luo.tian.spring.jpa.domain.Student;
+import com.querydsl.core.types.Predicate;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @TestPropertySource(locations={"classpath:application-test.properties"})
@@ -37,9 +38,14 @@ public class StudentControllerTest {
 	}
 	
 	@Test
-	public void testgetStudentWithName() {
+	public void testGetStudentWithName() {
 		Student student = studentController.getStudentWithName("zhangsan");
 		System.out.println(student);
+	}
+	
+	@Test
+	public void testGetStudentWithNameAndTelephone() {
+		
 	}
 
 }
